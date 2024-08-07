@@ -101,7 +101,6 @@ footer
     padding:80px 50px 20px;
     background: rgb(36, 53, 71);
     color:white;
-    text-align:uset;
 }
 footer > p{
     text-align: center;
@@ -119,10 +118,16 @@ footer .navbar
     display:block;
     width:unset;
 }
+footer .navbar a:hover::after
+{
+    width:0;
+}
 footer .navbar a, .services a
 {
     color:white;
     text-decoration: none;
+    text-align:unset;
+
 }
 .services{
     list-style: none;

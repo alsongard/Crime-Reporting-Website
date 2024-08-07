@@ -54,7 +54,7 @@
             <div class="contact subcontent">
                 <h2 id="title">Contact</h2 >
                 <p>Email: alsonservices@gmail.com</p>
-                <p style="text-align:unset">Phone: +12323434</p>
+                <p style="text-align:unset;">Phone: +12323434</p>
             </div>
              <!----address-->
              <div class="address subcontent">
