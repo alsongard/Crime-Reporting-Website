@@ -17,9 +17,14 @@
         </div>
     </header>
     <section>
-        <form action="">
-            <input type="text" placeholder="Enter your name..">
-            <input type="password" placeholder="Enter your password..">
+        <form action="./includes/user_login.php" method="POST">
+            <h1>Login</h1>
+            <input type="number" name="usr_number" placeholder="Enter your id number">
+            <input type="email"  name="usr_email" placeholder="Enter your email..">
+            <input type="number" name="usr_phonenumber" placeholder="Enter your phone number..">
+            <input type="text"   name="usr_fullname" placeholder="Enter your name..">
+            <input type="password" name="usr_passwd" placeholder="Enter your password..">
+            <input type="submit" value="Create Account">
         </form>
     </section>
 </body>
