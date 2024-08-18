@@ -77,10 +77,44 @@ header
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+.form-container
+{
+    border:2px solid black;
+    width:75%;
+    margin:0 auto;
+}
+.button-container
+{
+    border-radius:20px;
+    /* padding:5px 14px; */
+    width:280px;
+    margin:30px auto 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(217, 128, 50, 0.254);
+}
+#signup
+{
+    background-color: unset;
+    background-color: rgba(237, 233, 230, 0.807);
+}
+.button-container button
+{
+    width:100%;
+    border:none;
+
+    padding:5px 14px;
+
+    /* padding:inherit; */
+    border-radius: inherit;
+
+    background-color: transparent;
+}
+
 #home form
 {
     text-align: center;
-    border:2px solid black;
+    /* border:2px solid black; */
     padding:50px;
     width:800px;
     margin:0 auto;
