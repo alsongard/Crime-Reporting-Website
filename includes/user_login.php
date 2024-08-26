@@ -14,13 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         require_once "dbh.inc.php";
         $query = "INSERT INTO user_login_data(id_number, email, phone_number, user_name, user_pswd) VALUES (:userid, :useremail, :userphone, :username, :userpassword)";
 
+        //password hashing
+        $options = [
+            "cost" => 12
+        ];
+        $hashedPwd = password_hash($userpasswd, PASSWORD_BCRYPT, $options);
         //prepare statement
         $stmt =$pdo->prepare($query);
         $stmt -> bindParam("userid",$userid);
         $stmt -> bindParam("useremail",$useremail);
         $stmt -> bindParam("userphone", $userphone);
         $stmt -> bindParam("username", $username);
-        $stmt -> bindParam("userpassword", $userpasswd);
+        $stmt -> bindParam("userpassword", $hashedPwd);
 
         $stmt -> execute();
         header("Location: ../index.php");

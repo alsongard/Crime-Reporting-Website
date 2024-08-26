@@ -6,8 +6,10 @@ let passwd_confirm = document.querySelector(".passwd_confirm");
 let phone_field = document.querySelector(".phone_field");
 let title = document.querySelector(".title");
 let submitBtn = document.getElementById("submit");
+let form = document.querySelector("form");
 
 loginBtn.addEventListener("click", ()=>{
+    form.action = "../includes/login.inc.php";
     user_field.style.display = "none";
     id_field.style.display = "none";
     passwd_confirm.style.display = "none";
