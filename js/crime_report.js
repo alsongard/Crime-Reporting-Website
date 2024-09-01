@@ -21,6 +21,7 @@ loginBtn.addEventListener("click", ()=>{
 } );
 
 signBtn.addEventListener("click", ()=>{
+    form.action = "../includes/user_login.php";
     user_field.style.display = "block";
     id_field.style.display = "block";
     passwd_confirm.style.display = "block";
