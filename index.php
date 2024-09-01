@@ -1,3 +1,7 @@
+<?php 
+    require_once "./includes/signup_view.inc.php";
+    require_once "./includes/config.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,50 +31,25 @@
                 <button class="active" id="signup">SignUp</button>
                 <button id="login">Login</button>
             </div>
-            <form action="./includes/user_login.php" method="POST">
+            <form action="./includes/registration.php" method="POST">
                 <!-- <h1 class="title">Signup</h1> -->
                 <input class="user_field" type="text"   name="usr_fullname" placeholder="Enter name...">
                 <input class="email_field" type="email"  name="usr_email" placeholder="Enter email...">
                 <input class="id_field" type="number" name="usr_number" placeholder="Enter id number...">
                 <input class="phone_field" type="number" name="usr_phonenumber" placeholder="Enter phone number...">
                 <input class="passwd_field"  type="password" name="usr_passwd" placeholder="Enter password...">
-                <input class="passwd_confirm" type="password" name="confirm_passwd" placeholder="Confirm password...">
-                <input type="submit" value="Create Account">
+                <input class="passwd_confirm_field" type="password" name="confirm_passwd" placeholder="Confirm password...">
+                <input class="submitForm" type="submit" value="Create Account">
             </form>
+            <?php
+                check_signup_erros();
+            ?>
         </div>
     <section>
     <!-----------footer------------>
-    <section></section>
-    <footer>
-        <div class="footer-content">
-            <!--footnavbar-->
-            <ul class="navbar subcontent">
-                <h2 id="title">Get in Touch</h2 >
-                <a href="#home"><li>Home</li></a>
-                <a href="#about"><li>About</li></a>
-                <a href="#contact"><li>Contact</li></a>
-                <a href="#services"><li>Services</li></a>
-            </ul>
-            <ul class="services subcontent">
-                <h2 id="title">Services</h2 >
-                <a href="#report_crime"><li>Report Crime</li></a>
-                <a href="#services"><li>National Security</li></a>
-                <a href="#services"><li>Information & Cybersecurity</li></a>
-            </ul>
-            <!-----contact/getintouch---->
-            <div class="contact subcontent">
-                <h2 id="title">Contact</h2 >
-                <p>Email: alsonservices@gmail.com</p>
-                <p style="text-align:unset;">Phone: +12323434</p>
-            </div>
-             <!----address-->
-             <div class="address subcontent">
-                <h2 id="title">Address</h2>
-                <p>Moscow Street No. 123</p>
-            </div>
-        </div>
-        <p>&copy; 2020 Crime Report</p>
-    </footer>
+    <?php
+        require_once "footer.php";
+    ?>
     <script src="./js/crime_report.js" type="text/javascript"></script>
 </body>
 </html>
