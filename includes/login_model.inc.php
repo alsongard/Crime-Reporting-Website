@@ -13,6 +13,6 @@
         $stmt->bindParam(":usremail", $givenEmail);
         $stmt->execute();
 
-        $resutl = $stmt->fetch(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }

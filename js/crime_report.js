@@ -7,11 +7,6 @@ let user_field = document.querySelector(".user_field");
 let id_field = document.querySelector(".id_field");
 let passwd_confirm = document.querySelector(".passwd_confirm_field");
 let phone_field = document.querySelector(".phone_field");
-
-
-// let title = document.querySelector(".title");
-
-
 let submit = document.querySelector(".submitForm");
 let form = document.querySelector("form");
 

@@ -102,12 +102,9 @@ header
 {
     width:100%;
     border:none;
-
     padding:5px 14px;
-
     /* padding:inherit; */
     border-radius: inherit;
-
     background-color: transparent;
 }
 
@@ -176,4 +173,10 @@ footer .navbar a, .services a
 .subcontent
 {
     text-indent: left;
+}
+form > .logout
+{
+    border:none;
+    padding:5px 14px;
+    background-color: transparent;
 }

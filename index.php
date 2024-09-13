@@ -1,6 +1,8 @@
 <?php 
     require_once "./includes/signup_view.inc.php";
+    require_once "./includes/login_view.inc.php";
     require_once "./includes/config.inc.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +24,9 @@
             <a href="#services"><li>Services</li></a>
         </ul>
         <button id="reportBtn">Report Crime</button>
+        <form action="./includes/logout.inc.php" method="POST">
+                <button class="logout">Logout</button>
+        </form>
     </header>
     <section id="home">
         <h1>Alson Private Police Force</h1>
@@ -43,6 +48,7 @@
             </form>
             <?php
                 check_signup_erros();
+                check_login_errors();
             ?>
         </div>
     <section>
